@@ -4,13 +4,14 @@ import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Addtocart from './AddToCart';
 import OnlineShopping from './OnlineShopping';
 import Payement from './Payement';
+import ItemsList from './ItemsList';
 
 export default function App() {
   return (
     
     <View style={styles.container}>
       <SafeAreaView>
-      <Payement/>
+      <ItemsList/>
       </SafeAreaView>
     
       <StatusBar style="auto" />
@@ -22,7 +23,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#eee',
    
   },
 });
