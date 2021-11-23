@@ -5,6 +5,7 @@ import Addtocart from './AddToCart';
 import OnlineShopping from './OnlineShopping';
 import Payement from './Payement';
 import ItemsList from './ItemsList';
+import DetailItem from './DetailItem';
 
 export default function App() {
   return (

@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity, Image, FlatList, ScrollView } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
 import { EvilIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function ItemsList() {
     const items=[
@@ -29,14 +30,14 @@ export default function ItemsList() {
 }
 const Icones=()=>(
     <View style={{flexDirection:"row",justifyContent:"space-between"}}>
-        <View style={{backgroundColor:"white",borderRadius:50,padding:5}}>
-        <AntDesign name="back" size={24} color="black" /> 
-        </View>
-        
-       <View style={{backgroundColor:"white",borderRadius:50,padding:5}}>
-       <AntDesign name="shoppingcart" size={24} color="black" />
-        </View>
-   </View>
+    <TouchableOpacity style={{backgroundColor:"white",borderRadius:50,padding:5}} activeOpacity={0.5}>
+    <AntDesign name="back" size={24} color="black" /> 
+    </TouchableOpacity >
+    
+   <TouchableOpacity  style={{backgroundColor:"white",borderRadius:50,padding:5}} activeOpacity={0.5}>
+   <AntDesign name="shoppingcart" size={24} color="black" />
+    </TouchableOpacity >
+</View>
 )
 const SeachBar=()=>(
 <View style={{backgroundColor:"white",marginHorizontal:30,marginVertical:15,borderRadius:50,padding:15,flexDirection:"row",justifyContent:"space-between"}}>
@@ -57,8 +58,14 @@ const Items=({info,imag,price})=> {
                 <Image source={imag} style={{height:100,width:100}}/>
                 </View>
                 <View style={{marginTop:30}}>
-                <Text style={{marginLeft:20}}>{info}</Text>
-                <EvilIcons name="star" size={24} color="gold" style={{marginLeft:20}} />
+                <Text style={{marginLeft:20,fontSize:15}}>{info}</Text>
+                <View style={{marginLeft:20 ,flexDirection:"row"}}>
+                <Ionicons name="md-star" size={15} color="gold" />
+                <Ionicons name="md-star" size={15} color="gold" />
+                <Ionicons name="md-star" size={15} color="gold" />
+                <Ionicons name="md-star" size={15} color="white" />
+                </View>
+                 
                 <Text style={{marginLeft:20,color:"blue"}}>${price}</Text>
                 </View>
                 
